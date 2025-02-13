@@ -1,0 +1,185 @@
+/* Resetando as margens e o padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Adiciona box-sizing para facilitar o controle das dimensões */
+}
+
+/* Corpo da página */
+body {
+    font-family: "Trebuchet MS", Helvetica, sans-serif;
+    background: url('../imagens/fundo.png') repeat-x;
+}
+
+/* Container central */
+#container {
+    width: 90%; /* Usando largura porcentual para ser mais responsivo */
+    max-width: 750px; /* Definindo uma largura máxima */
+    margin: 0 auto;
+}
+
+/* Topo */
+#topo {
+    height: 150px;
+    background: url('../imagens/detalhe-topo.png') no-repeat right top;
+    padding-top: 25px;
+    text-align: center;
+}
+
+/* Logo */
+.logo {
+    width: 152px;
+    height: 66px;
+    background: url('../imagens/logo.png') no-repeat center;
+    text-indent: -9999px; /* Esconde o texto da logo */
+}
+
+/* Navegação */
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+#topo ul {
+    background: #b10333;
+    margin-top: 30px;
+    display: flex; /* Usando Flexbox para centralizar e alinhar os itens */
+    justify-content: center; /* Centraliza os itens */
+    padding: 0;
+}
+
+#topo ul li {
+    margin: 0 10px;
+}
+
+#topo ul a {
+    font-size: 0.9em;
+    padding: 0.5em 1.5em;
+    text-decoration: none;
+    color: #fff;
+    background: url('../imagens/divisor.png') no-repeat left center;
+    display: block;
+    line-height: 2.1em;
+}
+
+#topo ul a:hover {
+    color: #69001d;
+}
+
+/* Cor de fundo ativa na navegação */
+body.home #navegacao a#home, 
+body.brasil #navegacao a#brasil,
+body.internacional #navegacao a#internacional,
+body.economia #navegacao a#economia,
+body.saude #navegacao a#saude,
+body.ciencia #navegacao a#ciencia,
+body.fotos #navegacao a#fotos {
+    color: #fff;
+    background: #de003e;
+    cursor: pointer;
+}
+
+/* Conteúdo */
+#conteudo {
+    margin-top: 60px;
+    background: #f5f5f5;
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+}
+
+/* Coluna principal */
+#primario {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+/* Lateral (sidebar) */
+#lateral {
+    width: 180px;
+}
+
+/* Rodapé */
+#container-rodape {
+    background: #294c71;
+    padding: 20px;
+    clear: both;
+}
+
+#rodape {
+    color: #fff;
+    text-align: center;
+}
+
+/* Caixa de conteúdo */
+.caixa {
+    margin: 10px 0;
+    padding: 5px 0;
+    background: #f3f3f3 url('../imagens/fundo-caixa.png') no-repeat;
+}
+
+h2 {
+    font-size: 1em;
+    background: #294c71;
+    color: #fff;
+    padding: 5px;
+}
+
+.caixa-conteudo {
+    background: #fff;
+    padding: 5px;
+    margin-top: 5px;
+}
+
+/* Lateral - links */
+#lateral ul a {
+    font-size: 0.9em;
+    padding: 3px;
+    display: block;
+    line-height: 30px;
+    color: #000;
+    text-decoration: none;
+    border-bottom: 1px solid #f3f3f3;
+}
+
+#lateral ul a:hover {
+    background: #f9f9f9 url('../imagens/marcador.png') no-repeat left center;
+    color: #a1a1a1;
+    padding-left: 20px;
+}
+
+/* Formulário */
+label {
+    display: block;
+    cursor: pointer;
+}
+
+input {
+    padding: 5px;
+    width: 100%; /* Faz o input preencher toda a largura do formulário */
+    font-size: 0.9em;
+    background-color: #fff;
+}
+
+input.submit {
+    width: auto;
+    color: #fff;
+    background-color: #b10333;
+    border: 2px solid #870529;
+    padding: 5px;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    #conteudo {
+        flex-direction: column;
+    }
+
+    #lateral, #primario {
+        width: 100%;
+    }
+
+    #primario {
+        margin-left: 0;
+    }
+}
